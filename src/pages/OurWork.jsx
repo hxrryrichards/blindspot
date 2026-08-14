@@ -19,9 +19,9 @@ export default function OurWork() {
             <h1 className="max-w-3xl font-heading text-5xl leading-tight tracking-tight sm:text-6xl lg:text-7xl">Proof, not promises.
 
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/65">
-              Every result on this page is real, checkable, and ours. No estimates, no vanity
-              metrics.
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/65">Every result on this page is checkable and ours. No estimates, no vanity metrics.
+
+
             </p>
           </Reveal>
         </div>
