@@ -10,15 +10,14 @@ const founderParagraphs = [
 ];
 
 const whyExist = [
-  `Most agencies take your budget and manage your expectations downward. Blindspot was built on the opposite idea. That real focus, the right systems, and genuine care can outperform agencies ten times the size.`,
-  `We move fast and work smart, but we never outsource the thinking. Strategy, relationships, and accountability stay with us.`,
-  `We take on a limited number of clients by design. Every business we work with deserves our full attention, whatever industry they're in.`,
+  `We move fast and work smart, but the thinking never gets outsourced. Strategy, relationships, and accountability stay with us, always.`,
+  `We take on a limited number of clients by design. Every business we work with gets our full attention, whatever industry they're in.`,
 ];
 
 const values = [
-  { title: 'Honest', body: `We tell you what we see, even when it's not what you want to hear.` },
-  { title: 'Invested', body: `Your growth is our reputation. We treat it that way.` },
-  { title: 'Sharp', body: `We don't cut corners. We find the right angle.` },
+  { title: 'Honesty', body: `We tell you what we see, even when it's not what you want to hear.` },
+  { title: 'Investment', body: `Your growth is our reputation. We treat it that way.` },
+  { title: 'Sharpness', body: `We don't cut corners. We find the right angle.` },
 ];
 
 export default function About() {
@@ -104,12 +103,15 @@ export default function About() {
               <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 Ready to fix your blindspot?
               </h2>
+              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-foreground/65">
+                We'll send you an email and begin the conversation.
+              </p>
               <button
                 type="button"
                 onClick={openGetStarted}
                 className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
               >
-                Book a Call
+                Get Started
               </button>
             </div>
           </Reveal>
