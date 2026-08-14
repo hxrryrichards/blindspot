@@ -4,6 +4,7 @@ import { ArrowUpRight, Check, Star } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import { services } from '@/data/services';
 import ServiceQuoteModal from '@/components/ServiceQuoteModal';
+import FaqSection from '@/components/FaqSection';
 
 const tiers = [
   {
@@ -147,6 +148,28 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FaqSection
+        heading="Questions before you start?"
+        items={[
+          {
+            question: 'What if it doesn\u2019t work for my business?',
+            answer:
+              'Every Transform package comes with a 90 day guarantee. If you\u2019re not seeing measurable progress, we\u2019ll make it right.',
+          },
+          {
+            question: 'Do I need to sign a long contract?',
+            answer:
+              'No. We work month to month. If you\u2019re not seeing value, you\u2019re free to leave, and we\u2019d rather you did than kept paying for something that isn\u2019t working.',
+          },
+          {
+            question: 'Will I be working with you directly, or an account manager?',
+            answer:
+              'Directly. No account managers standing between you and the person actually doing the work.',
+          },
+        ]}
+      />
 
       {/* Bespoke add-ons */}
       <section className="px-6 pb-32 pt-12 md:px-12 lg:px-20">

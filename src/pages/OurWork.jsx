@@ -4,6 +4,7 @@ import Reveal from '@/components/Reveal';
 import { caseStudies } from '@/data/caseStudies';
 import CaseStudyModal from '@/components/CaseStudyModal';
 import { useGetStarted } from '@/components/GetStartedContext';
+import FaqSection from '@/components/FaqSection';
 
 export default function OurWork() {
   const [selected, setSelected] = useState(null);
@@ -53,6 +54,23 @@ export default function OurWork() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FaqSection
+        heading="A few common questions."
+        items={[
+          {
+            question: 'What industries do you work with?',
+            answer:
+              'Mostly local service businesses, but our client list ranges from construction and security to SaaS and tech startups. Every case study on this page is a real client, not a mock example.',
+          },
+          {
+            question: 'How quickly will I see results?',
+            answer:
+              'It depends on the service, but SEO and search visibility typically take a few weeks to a few months to build. Some things move faster. The case studies above show real timelines from real clients.',
+          },
+        ]}
+      />
 
       {/* Bottom CTA */}
       <section className="px-6 pb-32 pt-12 md:px-12 lg:px-20">
