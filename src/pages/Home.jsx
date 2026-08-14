@@ -154,9 +154,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brand logo carousel */}
-      <LogoCarousel />
-
       {/* What We Do — three pillars */}
       <section className="px-6 py-32 md:px-12 md:py-48 lg:px-20">
         <div className="mx-auto max-w-[1400px]">
@@ -167,10 +164,10 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          <div className="mt-20 grid gap-px border-t border-l border-gold/20 md:grid-cols-3">
+          <div className="mt-20 grid gap-6 md:grid-cols-3">
             {pillars.map((p, i) => (
               <Reveal key={p.n} delay={i * 0.12}>
-                <div className="flex h-full flex-col gap-6 border-b border-r border-gold/20 p-10 md:p-12">
+                <div className="flex h-full flex-col gap-6 rounded-2xl border border-gold/30 bg-surface/30 p-10 transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)] md:p-12">
                   <span className="font-heading text-5xl font-medium text-gold/40">{p.n}</span>
                   <h3 className="font-heading text-2xl font-medium tracking-tight">{p.title}</h3>
                   <p className="text-base leading-relaxed text-foreground/65">{p.body}</p>
@@ -180,6 +177,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Brand logo carousel */}
+      <LogoCarousel />
 
       {/* Testimonials */}
       <section className="border-y border-gold/20 bg-surface/40 px-6 py-32 md:px-12 md:py-48 lg:px-20">
@@ -213,7 +213,7 @@ export default function Home() {
       <section className="relative px-6 py-32 md:px-12 md:py-56 lg:px-20">
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
-            <div className="relative overflow-hidden rounded-sm border border-gold/20 p-12 text-center md:p-24">
+            <div className="relative overflow-hidden rounded-2xl border border-gold/30 p-12 text-center md:p-24">
               <Image
                 src={TEXTURE_IMG}
                 alt=""
