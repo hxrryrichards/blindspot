@@ -5,7 +5,7 @@ const ThemeContext = createContext({ theme: 'light', toggle: () => {} });
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     if (typeof window === 'undefined') return 'light';
-    return localStorage.getItem('blindspot-theme') || 'light';
+    return localStorage.getItem('blindspot-theme') || 'dark';
   });
 
   useEffect(() => {

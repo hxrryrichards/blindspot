@@ -1,7 +1,7 @@
 const BASE = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/';
 
 const LOGOS = [
-  { name: 'Sussex Fire & Security', file: '7c171dcfd_Untitleddesign3.PNG' },
+  { name: 'Sussex Fire & Security', file: '9d29e4573_Untitleddesign.PNG' },
   { name: 'The Original Curryland', file: 'f194381d9_Untitleddesign4.PNG' },
   { name: 'Leadership Blueprint Development', file: '0c44a8c00_Untitleddesign2.PNG' },
   { name: 'Furniture for Business', file: '29abea904_Untitleddesign6.PNG' },
