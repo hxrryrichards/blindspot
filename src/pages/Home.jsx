@@ -49,9 +49,9 @@ const testimonials = [
 },
 {
   quote:
-  'Calm, precise, and relentlessly effective. Blindspot feels less like an agency and more like the part of our team we didn’t know we were missing.',
-  name: 'James Okonkwo',
-  role: 'Director, Crestline HVAC'
+  "Blindspot are an essential part of our consumer mobile app development team. They've pioneered creative growth strategies across Pinterest, TikTok, and Reddit, among other platforms. The resulting metrics don't lie!",
+  name: 'Jasmine L.',
+  role: 'Founder, The Flower Shoppe'
 }];
 
 
@@ -70,23 +70,14 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease }}
               className="block text-balance">
-              
               Every business has a
+              <span className="gold-glow block">blindspot.</span>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease }}
-              className="gold-glow block">
-              
-              blindspot.
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1, ease }}
               className="mt-2 block text-balance text-foreground/55">
-              
               We fix yours.
             </motion.span>
           </h1>
@@ -94,7 +85,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3, ease }}
+            transition={{ duration: 0.8, delay: 1, ease }}
             className="mt-12 flex max-w-xl flex-col gap-8">
             
             <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl">
