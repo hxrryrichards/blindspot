@@ -5,7 +5,7 @@ const founderParagraphs = [
   `Most agencies will take your money, manage your expectations downward, and keep you on a retainer long after it stopped making sense. That's the industry standard. It's not ours.`,
   `Blindspot was built on a different belief entirely. If we don't deliver for you, you shouldn't be working with us. Full stop.`,
   `That's not a marketing line. It's how we operate. If you're not seeing results, you'll leave, and you should. We'd rather lose a client than keep one we're not delivering for. That's the only way this works long term, for you and for us.`,
-  `What you get when you work with Blindspot is simple. Clear communication, real effort, and someone who treats your business like it's their own. No account managers to chase. No hiding behind reports. Just honest work and honest results.`,
+  `Clear communication, concrete results and a team who treat your business like their own. We pride ourselves on good work and good results.`,
   `We've maintained 100% client retention since we launched. Not because clients are locked in. Because we haven't given them a reason to leave.`,
 ];
 
