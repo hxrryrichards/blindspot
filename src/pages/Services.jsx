@@ -149,6 +149,33 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Bespoke add-ons */}
+      <section className="px-6 pb-32 pt-12 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1400px]">
+          <Reveal>
+            <div className="rounded-2xl border border-gold/30 bg-surface/30 p-12 text-center md:p-24">
+              <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                Need something more specific?
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-foreground/65">
+                Reddit growth, X marketing, Pinterest strategy, UGC campaigns, paid ad creative, and
+                more, all available as add-ons or their own bespoke package.
+              </p>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-foreground/65">
+                Don’t see exactly what fits? Let’s build a quote around exactly what you need.
+              </p>
+              <button
+                type="button"
+                onClick={() => setSelected('bespoke')}
+                className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
+              >
+                Build Your Package
+              </button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <ServiceQuoteModal pkg={selected} onClose={() => setSelected(null)} />
     </div>
   );
