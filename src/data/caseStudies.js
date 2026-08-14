@@ -57,13 +57,4 @@ export const caseStudies = [
     whatWeDid: `Built and executed individual marketing strategies for each app tailored to the platform and audience most likely to convert. For CityCub, developed a short-form video content strategy on TikTok, testing multiple formats to identify the highest performing approach before scaling production to 20 videos per week. For Crystal Ritual, built a Pinterest marketing strategy targeting wellness and spirituality audiences, creating content designed to drive consistent monthly traffic through to the app and generate downloads and upsells.`,
     results: `168,000 views generated from a single TikTok video for CityCub. Multiple videos consistently achieving 4 figure view counts. 310,000 monthly Pinterest impressions generated for Crystal Ritual. Consistent click through traffic from Pinterest driving app downloads and in app upsells. 20 videos per week scaled at peak TikTok production.`,
   },
-  {
-    id: 'travel-lifestyle-creator',
-    name: 'Travel and Lifestyle Creator',
-    category: 'Creator & Lifestyle',
-    preview: 'Grew from 800 to 6,800 followers in 90 days, across every platform.',
-    challenge: `A creator stuck at a plateau with stagnant growth across platforms.`,
-    whatWeDid: `Built a cross-platform content and growth strategy tailored to each platform's audience.`,
-    results: `Grew from 800 to 6,800 followers in 90 days, across every platform.`,
-  },
 ];
