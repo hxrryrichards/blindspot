@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Mail, Linkedin } from 'lucide-react';
-
-const services = ['SEO', 'Social Media Marketing', 'Content Creation & Video Editing', 'User Generated Content'];
+import { services } from '@/data/services';
 
 export default function Footer() {
   return (
@@ -34,8 +33,8 @@ export default function Footer() {
             <p className="metadata text-foreground/40">Services</p>
             <ul className="mt-5 space-y-3 text-sm">
               {services.map((s) => (
-                <li key={s}>
-                  <Link to="/services" className="text-foreground/70 transition-colors hover:text-gold">{s}</Link>
+                <li key={s.slug}>
+                  <Link to={`/services/${s.slug}`} className="text-foreground/70 transition-colors hover:text-gold">{s.title}</Link>
                 </li>
               ))}
             </ul>
