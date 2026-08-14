@@ -73,7 +73,7 @@ export function GetStartedProvider({ children }) {
                       type="submit"
                       className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)]"
                     >
-                      Learn More <ArrowRight className="h-4 w-4" />
+                      Submit <ArrowRight className="h-4 w-4" />
                     </button>
                   </form>
                 </>

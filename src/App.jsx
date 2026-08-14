@@ -13,6 +13,7 @@ import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import OurWork from '@/pages/OurWork';
 import About from '@/pages/About';
+import ServiceDetail from '@/pages/ServiceDetail';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -43,6 +44,7 @@ const AuthenticatedApp = () => {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-work" element={<OurWork />} />
         <Route path="/about" element={<About />} />
       </Route>
