@@ -198,7 +198,7 @@ export default function Home() {
             {testimonials.map((t, i) =>
             <Reveal key={t.name} delay={i * 0.1}>
                 <figure className="flex h-full flex-col justify-between gap-10 rounded-2xl border border-gold/30 bg-background p-10 shadow-[0_12px_40px_-24px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
-                  <blockquote className="font-heading text-xl leading-relaxed text-foreground/85">
+                  <blockquote className="font-heading leading-relaxed text-foreground/85 text-base">
                     “{t.quote}”
                   </blockquote>
                   <figcaption>
