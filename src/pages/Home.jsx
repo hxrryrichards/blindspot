@@ -2,15 +2,16 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import LogoCarousel from '@/components/LogoCarousel';
 import { Image } from '@/components/ui/image';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/e01058633_generated_f2637fc0.png';
 const TEXTURE_IMG = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/1540c090b_generated_a8747959.png';
 
 const stats = [
-  { value: '120+', label: 'Brands scaled' },
-  { value: '50M+', label: 'Organic views generated' },
-  { value: '96%', label: 'Client retention rate' },
+  { value: '10+', label: 'Brands scaled' },
+  { value: '4M+', label: 'Organic views generated' },
+  { value: '100%', label: 'Client retention rate' },
 ];
 
 const pillars = [
@@ -153,17 +154,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Full-bleed image band */}
-      <section className="relative">
-        <div className="h-[60vh] w-full overflow-hidden md:h-[80vh]">
-          <Image
-            src={HERO_IMG}
-            alt="A single object in a pool of warm light against deep charcoal"
-            fittingType="fill"
-            className="h-full w-full"
-          />
-        </div>
-      </section>
+      {/* Brand logo carousel */}
+      <LogoCarousel />
 
       {/* What We Do — three pillars */}
       <section className="px-6 py-32 md:px-12 md:py-48 lg:px-20">
@@ -202,7 +194,7 @@ export default function Home() {
           <div className="mt-20 grid gap-8 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 0.1}>
-                <figure className="flex h-full flex-col justify-between gap-10 rounded-sm border border-gold/20 bg-background p-10 transition-shadow duration-500 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.4)]">
+                <figure className="flex h-full flex-col justify-between gap-10 rounded-2xl border border-gold/30 bg-background p-10 shadow-[0_12px_40px_-24px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
                   <blockquote className="font-heading text-xl leading-relaxed text-foreground/85">
                     “{t.quote}”
                   </blockquote>
