@@ -58,7 +58,7 @@ export function GetStartedProvider({ children }) {
                     Let's find your blindspot.
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/60">
-                    Leave your email and we'll send over exactly how we build systems that compound.
+                    Leave your email. We'll show you what your blindspot might actually be, and what closing it looks like.
                   </p>
                   <form onSubmit={submit} className="mt-8 space-y-4">
                     <input
