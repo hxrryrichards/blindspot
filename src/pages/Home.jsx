@@ -136,7 +136,7 @@ export default function Home() {
                   {s.value}
                 </span>
                 <span className="metadata text-foreground/40">{s.label}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-gold/50 hidden" />
+                
               </div>
             )}
           </div>
