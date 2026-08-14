@@ -135,7 +135,7 @@ export default function Home() {
           <Reveal>
             <p className="metadata mb-6 text-gold">What we do</p>
             <h2 className="max-w-2xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              A system built to find, fix, and compound.
+              A system built to find, enhance and compound.
             </h2>
           </Reveal>
 
@@ -213,8 +213,8 @@ export default function Home() {
                 Get Started
               </button>
               <div className="mt-8">
-                <Link to="/our-work" className="group inline-flex items-center gap-2 text-sm font-medium text-foreground/50 transition-colors hover:text-gold">
-                  see more of our work
+                <Link to="/services" className="group inline-flex items-center gap-2 text-sm font-medium text-foreground/50 transition-colors hover:text-gold">
+                  view our services
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
