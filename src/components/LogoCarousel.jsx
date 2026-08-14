@@ -1,16 +1,16 @@
 const BASE = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/';
 
 const LOGOS = [
-  { name: 'The Original Curryland', file: 'fe5287403_Untitleddesign4.PNG' },
-  { name: 'Leadership Blueprint Development', file: '3ca32c9dd_Untitleddesign5.PNG' },
-  { name: 'Furniture for Business', file: '57f55e737_Untitleddesign6.PNG' },
-  { name: 'Crystal Ritual', file: 'fdb1f1402_Untitleddesign7.PNG' },
-  { name: 'Ring Style Finder', file: '1f8ef3e3d_Untitleddesign8.PNG' },
-  { name: 'codezero', file: 'cceb9d867_Untitleddesign9.PNG' },
-  { name: 'BabyLoveGrowth.ai', file: '511672846_Untitleddesign10.PNG' },
-  { name: 'Metamind with Eben Pagan', file: '23bb894d3_Untitleddesign11.PNG' },
-  { name: 'E.V.A Design & Build Specialist', file: '5d298cc51_Untitleddesign12.PNG' },
-  { name: 'Sussex Fire & Security', file: '4ca8e8859_Untitleddesign.PNG' },
+  { name: 'Sussex Fire & Security', file: '7c171dcfd_Untitleddesign3.PNG' },
+  { name: 'The Original Curryland', file: 'f194381d9_Untitleddesign4.PNG' },
+  { name: 'Leadership Blueprint Development', file: '0c44a8c00_Untitleddesign2.PNG' },
+  { name: 'Furniture for Business', file: '29abea904_Untitleddesign6.PNG' },
+  { name: 'Crystal Ritual', file: '6c915659d_Untitleddesign7.PNG' },
+  { name: 'Ring Style Finder', file: '49f5bb173_Untitleddesign8.PNG' },
+  { name: 'codezero', file: '5c68d5e41_Untitleddesign9.PNG' },
+  { name: 'BabyLoveGrowth.ai', file: 'b329e0883_Untitleddesign10.PNG' },
+  { name: 'Metamind with Eben Pagan', file: '96f9d5d70_Untitleddesign11.PNG' },
+  { name: 'E.V.A Design & Build Specialist', file: 'e97aab226_Untitleddesign12.PNG' },
 ];
 
 function LogoItem({ name, file }) {
