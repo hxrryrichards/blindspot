@@ -37,7 +37,7 @@ const testimonials = [
 {
   quote:
   'Blindspot found the gap we had been staring at for years. Within four months our organic traffic had tripled and the calls hadn’t stopped since.',
-  name: 'Marcus Reid',
+  name: "Arthur E.",
   role: 'Founder, Northgate Plumbing Co.'
 },
 {
