@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import LogoCarousel from '@/components/LogoCarousel';
+import { useGetStarted } from '@/components/GetStartedContext';
 import { Image } from '@/components/ui/image';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/e01058633_generated_f2637fc0.png';
@@ -56,6 +57,7 @@ const testimonials = [
 const ease = [0.22, 1, 0.36, 1];
 
 export default function Home() {
+  const { open: openGetStarted } = useGetStarted();
   return (
     <div className="overflow-hidden">
       {/* Hero */}
@@ -109,12 +111,13 @@ export default function Home() {
               stops being a sprint and becomes an asset.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Link
-                to="/services"
+              <button
+                type="button"
+                onClick={openGetStarted}
                 className="inline-flex h-14 items-center rounded-full bg-gold px-9 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]">
-                
+
                 Get Started
-              </Link>
+              </button>
               <Link
                 to="/our-work"
                 className="inline-flex h-14 items-center gap-2 rounded-full border border-gold/30 px-9 text-sm font-semibold text-foreground transition-colors hover:bg-gold/10">
@@ -225,12 +228,13 @@ export default function Home() {
                 <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                   Let’s find the gap — and make it your advantage.
                 </h2>
-                <Link
-                  to="/services"
+                <button
+                  type="button"
+                  onClick={openGetStarted}
                   className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]">
-                  
+
                   Get Started
-                </Link>
+                </button>
               </div>
             </div>
           </Reveal>

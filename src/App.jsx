@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { GetStartedProvider } from '@/components/GetStartedContext';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Services from '@/pages/Services';
@@ -55,15 +56,17 @@ function App() {
 
   return (
     <ThemeProvider>
-      <AuthProvider>
-        <QueryClientProvider client={queryClientInstance}>
-          <Router>
-            <ScrollToTop />
-            <AuthenticatedApp />
-          </Router>
-          <Toaster />
-        </QueryClientProvider>
-      </AuthProvider>
+      <GetStartedProvider>
+        <AuthProvider>
+          <QueryClientProvider client={queryClientInstance}>
+            <Router>
+              <ScrollToTop />
+              <AuthenticatedApp />
+            </Router>
+            <Toaster />
+          </QueryClientProvider>
+        </AuthProvider>
+      </GetStartedProvider>
     </ThemeProvider>
   )
 }

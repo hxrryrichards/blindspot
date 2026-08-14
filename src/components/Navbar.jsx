@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import { useGetStarted } from './GetStartedContext';
 
 const links = [
   { label: 'Home', path: '/' },
@@ -15,6 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { open: openGetStarted } = useGetStarted();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -60,12 +62,13 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Link
-            to="/services"
+          <button
+            type="button"
+            onClick={openGetStarted}
             className="hidden h-12 items-center rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.35)] md:inline-flex"
           >
             Get Started
-          </Link>
+          </button>
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
@@ -100,12 +103,13 @@ export default function Navbar() {
                   {l.label}
                 </NavLink>
               ))}
-              <Link
-                to="/services"
+              <button
+                type="button"
+                onClick={openGetStarted}
                 className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground"
               >
                 Get Started
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}

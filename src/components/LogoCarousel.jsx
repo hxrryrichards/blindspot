@@ -21,23 +21,24 @@ function LogoItem({ name }) {
 }
 
 export default function LogoCarousel() {
-  const row = [...LOGOS, ...LOGOS];
+  // Two identical halves so the -50% marquee loops seamlessly.
+  const half = [...LOGOS, ...LOGOS];
   return (
     <section className="border-y border-gold/20 bg-surface/30 py-20 md:py-28">
       <div className="mx-auto mb-12 max-w-[1400px] px-6 md:px-12 lg:px-20">
         <p className="metadata text-center text-foreground/40">Brands we've scaled</p>
       </div>
       <div className="relative flex overflow-hidden">
-        {/* edge fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-background to-transparent" />
-        <div className="marquee-track flex shrink-0 items-center">
-          {row.map((name, i) => (
+        <div
+          className="marquee-track flex w-max shrink-0 items-center"
+          style={{ animationDuration: '52s' }}
+        >
+          {half.map((name, i) => (
             <LogoItem key={`a-${i}`} name={name} />
           ))}
-        </div>
-        <div className="marquee-track flex shrink-0 items-center" aria-hidden="true">
-          {row.map((name, i) => (
+          {half.map((name, i) => (
             <LogoItem key={`b-${i}`} name={name} />
           ))}
         </div>
