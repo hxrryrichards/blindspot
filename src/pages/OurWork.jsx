@@ -16,8 +16,8 @@ export default function OurWork() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <p className="metadata mb-6 text-gold">REAL RESULTS. REAL NUMBERS.</p>
-            <h1 className="max-w-3xl font-heading text-5xl leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-              Work that moves the needle.
+            <h1 className="max-w-3xl font-heading text-5xl leading-tight tracking-tight sm:text-6xl lg:text-7xl">Proof, not promises.
+
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/65">
               Every result on this page is real, checkable, and ours. No estimates, no vanity
@@ -31,13 +31,13 @@ export default function OurWork() {
       <section className="px-6 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {caseStudies.map((c, i) => (
-              <Reveal key={c.id} delay={i * 0.08}>
+            {caseStudies.map((c, i) =>
+            <Reveal key={c.id} delay={i * 0.08}>
                 <button
-                  type="button"
-                  onClick={() => setSelected(c)}
-                  className="group flex h-full w-full flex-col gap-6 rounded-2xl border border-gold/30 bg-surface/30 p-10 text-left transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]"
-                >
+                type="button"
+                onClick={() => setSelected(c)}
+                className="group flex h-full w-full flex-col gap-6 rounded-2xl border border-gold/30 bg-surface/30 p-10 text-left transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
+                
                   <h3 className="font-heading text-2xl font-medium tracking-tight">{c.name}</h3>
                   <p className="text-base leading-relaxed text-foreground/65">{c.preview}</p>
                   <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-gold">
@@ -46,7 +46,7 @@ export default function OurWork() {
                   </span>
                 </button>
               </Reveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -62,8 +62,8 @@ export default function OurWork() {
               <button
                 type="button"
                 onClick={openGetStarted}
-                className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
-              >
+                className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]">
+                
                 Book a Call
               </button>
             </div>
@@ -72,6 +72,6 @@ export default function OurWork() {
       </section>
 
       <CaseStudyModal study={selected} onClose={() => setSelected(null)} />
-    </div>
-  );
+    </div>);
+
 }
