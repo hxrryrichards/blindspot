@@ -38,7 +38,7 @@ const testimonials = [
   quote:
   'Blindspot found the gap we had been staring at for years. Within four months our organic traffic had tripled and the calls hadn’t stopped since.',
   name: "Arthur E.",
-  role: ""
+  role: "CEO, E.V.A Design & Build Specialists"
 },
 {
   quote:
