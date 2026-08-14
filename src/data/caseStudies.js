@@ -1,63 +1,69 @@
 export const caseStudies = [
   {
+    id: 'eva-design-build',
+    name: 'E.V.A Design & Build Specialists',
+    category: 'Local Service Business',
+    preview: 'A 15x increase in monthly enquiry value from consistent content.',
+    challenge: `E.V.A Design & Build had a strong reputation locally and delivered high-quality work, but their online presence didn't reflect it. They had no consistent content strategy, low engagement across platforms, and were generating almost all enquiries through word of mouth. This meant unpredictable lead flow and missed opportunities from homeowners actively searching for services like kitchen renovations and bespoke carpentry.`,
+    whatWeDid: `Built and executed a cross-platform content strategy across TikTok, Instagram, and Facebook. Produced 3 short-form videos per week focused on high-performing formats including before and after transformations, customer reactions, and trust-building content. Positioned the brand around key trust drivers such as 5 star reviews, decades of experience, and repeat clients. Optimised content for reach using platform-native hooks, trending formats, and targeted hashtags.`,
+    results: `Grew TikTok from 160 to 1,900 followers. Scaled Instagram from 60 to 317 followers. Increased Facebook from 40 to 116 followers. Generated £14,000 in project enquiries within 6 months. Increased monthly enquiry value from £1,000 to £15,000, a 15x uplift. Achieved a 204% increase in reach within the first month of consistent posting.`,
+    testimonial: {
+      quote: `Working with Blindspot has transformed our business. They've elevated our social media with innovative reels, engaging posts, and smart strategies that have boosted visibility and enquiries. Their before and after content showcases our work perfectly, and they've consistently been creative, responsive, and easy to work with.`,
+      author: 'Arthur Edward, CEO',
+    },
+  },
+  {
     id: 'sussex-fire-security',
     name: 'Sussex Fire & Security',
-    preview: 'Ranked #1 for a competitive local keyword within weeks of launch.',
-    challenge:
-      'A new local security firm launching into a crowded, established market with no existing visibility or website authority to speak of.',
-    whatWeDid:
-      'Built a focused local SEO foundation and targeted content around the competitive keyword their customers actually search for.',
-    results: 'Ranked #1 for a competitive local keyword within weeks of launch.',
+    category: 'Local Service Business',
+    preview: 'Ranked number 1 for a competitive local keyword within weeks of launch.',
+    challenge: `Sussex Fire & Security are an established Ajax Systems partner, but had no dedicated website built to capture the specific demand for Ajax alarm installation across Sussex, leaving them invisible to customers actively searching for an Ajax installer in their area.`,
+    whatWeDid: `Built Sussex Fire & Security a brand new website from the ground up, optimised around their Ajax partnership and local service area. Ran a full local SEO overhaul alongside the build, on page optimisation, Google Business Profile setup, and search intent led content targeting the exact terms their customers were searching.`,
+    results: `Within weeks of the new site going live, Sussex Fire & Security ranked number 1 on Google for "Ajax installers Sussex," outranking established competitors across the region, and now shows up consistently across their core fire and security search terms.`,
   },
   {
     id: 'furniture-for-business',
     name: 'Furniture for Business',
+    category: 'Retail & Ecommerce',
     preview: 'From zero visibility to their first sale in 3 months.',
-    challenge:
-      'A B2B furniture supplier with no digital presence and no organic traffic to speak of.',
-    whatWeDid:
-      'Built their visibility from the ground up — foundational SEO, content, and the channels that reach commercial buyers.',
-    results: 'From zero visibility to their first sale in 3 months.',
-  },
-  {
-    id: 'eva-design-build',
-    name: 'E.V.A Design & Build Specialists',
-    preview: 'A 15x increase in monthly enquiry value from consistent content.',
-    challenge:
-      'An established design and build firm relying on inconsistent, word-of-mouth enquiries.',
-    whatWeDid:
-      'Built a consistent content engine — reels, posts, and strategy — that showcased their work and stayed visible to the right audience.',
-    results: 'A 15x increase in monthly enquiry value from consistent content.',
+    challenge: `Furniture for Business launched a brand new website with zero existing traffic, zero rankings, and zero search visibility, starting completely from scratch.`,
+    whatWeDid: `Began publishing 30 SEO optimised blog posts per month, built around search terms their ideal customers were actually looking for. Delivered 5 backlinks within the first month to start building domain authority from day one. Set up and optimised their Google Business Profile alongside the content push.`,
+    results: `Within the first 3 months, the site went from zero visibility to 6,780 impressions and 20 clicks on Google Search, including ranking for their own brand name and product intent terms like "office chairs near me." That visibility translated into their first 2 organic enquiries and first sale.`,
   },
   {
     id: 'codezero',
-    name: 'CodeZero',
+    name: 'Codezero Technologies Inc.',
+    category: 'Tech Startup',
     preview: '900,000 impressions in a single month, 40 times the original target.',
-    challenge:
-      'CodeZero had no established presence on X and needed to build credibility and visibility for their brand in a competitive, technical space, essentially starting from zero.',
-    whatWeDid:
-      'Built and executed a daily posting and engagement strategy on X. Ran a boosted campaign projected to reach 20,000 impressions as a conservative internal benchmark.',
-    results:
-      'The campaign massively outperformed projections, generating 900,000 impressions in a single month, over 40 times the original target. Grew from 0 to 121 followers over the same period. The visibility drove real product interest too — the month the campaign launched, CodeZero saw 1,300 installs of the product being promoted, well ahead of internal targets, followed by 1,800 installs the following month.',
+    challenge: `Codezero Technologies Inc. had no established presence on X and needed to build credibility and visibility for their brand in a competitive, technical space, essentially starting from zero.`,
+    whatWeDid: `Built and executed a daily posting and engagement strategy on X. Ran a boosted campaign projected to reach 20,000 impressions as a conservative internal benchmark.`,
+    results: `The campaign massively outperformed projections, generating 900,000 impressions in a single month, over 40 times the original target. Grew from 0 to 121 followers over the same period. The month the campaign launched, Codezero saw 1,300 installs of the product being promoted, well ahead of internal targets, followed by 1,800 installs the following month.`,
   },
   {
     id: 'babylovegrowth',
-    name: 'BabyLoveGrowth',
+    name: 'BabyLoveGrowth.AI',
+    category: 'SaaS',
     preview: 'From $100,000 to over $5,000,000 in annual recurring revenue.',
-    challenge:
-      'BabyLoveGrowth needed a consistent, scalable content engine to fuel the channel driving nearly all of their customer acquisition — paid social and UGC.',
-    whatWeDid:
-      'Started by creating content directly, then built and now lead a growing creator team producing ongoing UGC for their Meta ad campaigns. Monthly output has scaled from 15 pieces of content in the early months to 40, and now 80 pieces of content per month, with full creative direction and quality control on every piece.',
-    results:
-      'Since September 2025, BabyLoveGrowth has grown from $100,000 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.',
+    challenge: `BabyLoveGrowth.AI needed a consistent, scalable content engine to fuel the channel driving nearly all of their customer acquisition, paid social and UGC.`,
+    whatWeDid: `Started by creating content directly, then built and now lead a growing creator team producing ongoing UGC for their Meta ad campaigns. Monthly output has scaled from 15 pieces of content in the early months to 40, and now 80 pieces of content per month, with full creative direction and quality control on every piece.`,
+    results: `Since September 2025, BabyLoveGrowth.AI has grown from $100,000 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.`,
+  },
+  {
+    id: 'the-flower-shoppe',
+    name: 'The Flower Shoppe',
+    category: 'Apps & Software',
+    preview: '168,000 views from a single TikTok video, and 310,000 monthly Pinterest impressions.',
+    challenge: `The Flower Shoppe had developed multiple consumer apps including a family events finder and a wellness and crystal app, but had no consistent strategy for driving awareness, downloads, or retention across any of them. Each product was launching into the market with no audience, no content playbook, and no distribution system.`,
+    whatWeDid: `Built and executed individual marketing strategies for each app tailored to the platform and audience most likely to convert. For CityCub, developed a short-form video content strategy on TikTok, testing multiple formats to identify the highest performing approach before scaling production to 20 videos per week. For Crystal Ritual, built a Pinterest marketing strategy targeting wellness and spirituality audiences, creating content designed to drive consistent monthly traffic through to the app and generate downloads and upsells.`,
+    results: `168,000 views generated from a single TikTok video for CityCub. Multiple videos consistently achieving 4 figure view counts. 310,000 monthly Pinterest impressions generated for Crystal Ritual. Consistent click through traffic from Pinterest driving app downloads and in app upsells. 20 videos per week scaled at peak TikTok production.`,
   },
   {
     id: 'travel-lifestyle-creator',
     name: 'Travel and Lifestyle Creator',
+    category: 'Creator & Lifestyle',
     preview: 'Grew from 800 to 6,800 followers in 90 days, across every platform.',
-    challenge: 'A creator stuck at a plateau with stagnant growth across platforms.',
-    whatWeDid:
-      'Built a cross-platform content and growth strategy tailored to each platform’s audience.',
-    results: 'Grew from 800 to 6,800 followers in 90 days, across every platform.',
+    challenge: `A creator stuck at a plateau with stagnant growth across platforms.`,
+    whatWeDid: `Built a cross-platform content and growth strategy tailored to each platform's audience.`,
+    results: `Grew from 800 to 6,800 followers in 90 days, across every platform.`,
   },
 ];

@@ -48,6 +48,15 @@ export default function CaseStudyModal({ study, onClose }) {
                 <p className="metadata mb-2 text-foreground/50">Results</p>
                 <p className="text-base leading-relaxed text-foreground/80">{study.results}</p>
               </div>
+              {study.testimonial && (
+                <div>
+                  <p className="metadata mb-2 text-foreground/50">Testimonial</p>
+                  <blockquote className="text-base leading-relaxed text-foreground/80">
+                    “{study.testimonial.quote}”
+                  </blockquote>
+                  <p className="mt-2 text-sm text-foreground/50">{study.testimonial.author}</p>
+                </div>
+              )}
             </div>
 
             <button
