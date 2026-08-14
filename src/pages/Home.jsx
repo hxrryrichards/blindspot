@@ -105,7 +105,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1.3, ease }}
             className="mt-12 flex max-w-xl flex-col gap-8">
             
-            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl">Blindspot is a digital marketing agency designed for local service businesses. We build automated content and SEO systems that compound growth over time — so visibility stops being a sprint and becomes an asset.
+            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl [font-family:'Plus_Jakarta_Sans',_ui-sans-serif,_system-ui,_sans-serif] font-normal">S
 
 
 
