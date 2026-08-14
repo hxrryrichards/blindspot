@@ -36,13 +36,13 @@ const pillars = [
 const testimonials = [
 {
   quote:
-  'Blindspot found the gap we had been staring at for years. Within four months our organic traffic had tripled and the calls hadn’t stopped since.',
+  "Working with Blindspot has transformed our business. They've elevated our social media with innovative reels, engaging posts, and smart strategies that have boosted visibility and enquiries. Their before-and-after content showcases our work perfectly, and they've consistently been creative, responsive, and easy to work with. We're lucky to have found them and highly recommend their services.",
   name: "Arthur E.",
   role: "CEO, E.V.A Design & Build Specialists"
 },
 {
   quote:
-  'They don’t sell campaigns — they build systems. Our content now runs on its own and every month is bigger than the last. It’s the first marketing that actually compounded.',
+  "Myself and the Blindspot team have been working together for a couple of years now. Their insight and energy are always great assets when we are working together. They're always timely in responses and treat what they do for us like it's their own company.",
   name: "Rob S.",
   role: "CEO , Blueprint Leadership Development"
 },
