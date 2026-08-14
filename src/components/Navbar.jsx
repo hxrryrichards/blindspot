@@ -36,12 +36,12 @@ export default function Navbar() {
       }>
       
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12 lg:px-20">
-        <Link to="/" className="group flex items-center hidden" aria-label="Blindspot home">
-          <span className="font-heading text-2xl font-semibold tracking-tight text-foreground">
-            Blindspot
-          </span>
-          <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gold transition-transform duration-300 group-hover:scale-150" />
-        </Link>
+        
+
+
+
+
+        
 
         <div className="hidden items-center gap-10 md:flex">
           {links.map((l) =>
