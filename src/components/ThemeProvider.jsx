@@ -19,7 +19,7 @@ export function ThemeProvider({ children }) {
     const root = document.documentElement;
     root.classList.add('theme-transition');
     setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
-    window.setTimeout(() => root.classList.remove('theme-transition'), 450);
+    window.setTimeout(() => root.classList.remove('theme-transition'), 350);
   };
 
   return (

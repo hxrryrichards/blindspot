@@ -1,20 +1,77 @@
+import { useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import { caseStudies } from '@/data/caseStudies';
+import CaseStudyModal from '@/components/CaseStudyModal';
+import { useGetStarted } from '@/components/GetStartedContext';
 
 export default function OurWork() {
+  const [selected, setSelected] = useState(null);
+  const { open: openGetStarted } = useGetStarted();
+
   return (
-    <section className="px-6 pb-32 pt-40 md:px-12 md:pt-48 lg:px-20">
-      <div className="mx-auto max-w-[1400px]">
-        <Reveal>
-          <p className="metadata mb-6 text-gold">Our Work</p>
-          <h1 className="max-w-3xl font-heading text-5xl leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            Results, in their own light.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/65">
-            Case studies from the local service businesses we’ve helped find — and fix — their
-            blindspot.
-          </p>
-        </Reveal>
-      </div>
-    </section>
+    <div className="overflow-hidden">
+      {/* Hero */}
+      <section className="px-6 pb-20 pt-40 md:px-12 md:pt-48 lg:px-20">
+        <div className="mx-auto max-w-[1400px]">
+          <Reveal>
+            <p className="metadata mb-6 text-gold">REAL RESULTS. REAL NUMBERS.</p>
+            <h1 className="max-w-3xl font-heading text-5xl leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+              Work that moves the needle.
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/65">
+              Every result on this page is real, checkable, and ours. No estimates, no vanity
+              metrics.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Case study cards */}
+      <section className="px-6 pb-24 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {caseStudies.map((c, i) => (
+              <Reveal key={c.id} delay={i * 0.08}>
+                <button
+                  type="button"
+                  onClick={() => setSelected(c)}
+                  className="group flex h-full w-full flex-col gap-6 rounded-2xl border border-gold/30 bg-surface/30 p-10 text-left transition-all duration-500 hover:border-gold/50 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]"
+                >
+                  <h3 className="font-heading text-2xl font-medium tracking-tight">{c.name}</h3>
+                  <p className="text-base leading-relaxed text-foreground/65">{c.preview}</p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-gold">
+                    Read the case study
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </button>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="px-6 pb-32 pt-12 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1400px]">
+          <Reveal>
+            <div className="rounded-2xl border border-gold/30 p-12 text-center md:p-24">
+              <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                Think we could do this for you?
+              </h2>
+              <button
+                type="button"
+                onClick={openGetStarted}
+                className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
+              >
+                Book a Call
+              </button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <CaseStudyModal study={selected} onClose={() => setSelected(null)} />
+    </div>
   );
 }
