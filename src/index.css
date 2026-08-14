@@ -32,9 +32,9 @@
     --chart-4: 44 30% 70%;
     --chart-5: 44 26% 74%;
     --radius: 0.25rem;
-    --font-heading: 'Fraunces', ui-serif, Georgia, serif;
+    --font-heading: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
     --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Fraunces', ui-serif, Georgia, serif;
+    --font-display: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --sidebar-background: 44 34% 82%;
     --sidebar-foreground: 60 2% 17%;
