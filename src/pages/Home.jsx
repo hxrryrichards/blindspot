@@ -105,10 +105,10 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1.3, ease }}
             className="mt-12 flex max-w-xl flex-col gap-8">
             
-            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl">
-              Blindspot is a specialist marketing agency for local service businesses. We build
-              automated content and SEO systems that compound growth over time — so visibility
-              stops being a sprint and becomes an asset.
+            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl">Blindspot is a digital marketing agency designed for local service businesses. We build automated content and SEO systems that compound growth over time — so visibility stops being a sprint and becomes an asset.
+
+
+
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <button
