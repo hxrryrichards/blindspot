@@ -1,21 +1,27 @@
-// Placeholder wordmarks — replace these with real brand logos (image URLs or SVGs) when ready.
-// Each entry renders as an elegant grayscale wordmark that brightens to gold on hover.
+const BASE = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/';
+
 const LOGOS = [
-  'Northgate',
-  'BrightSmile',
-  'Crestline',
-  'Lumen',
-  'Atlas',
-  'Veridian',
-  'Meridian',
-  'Solace',
+  { name: 'The Original Curryland', file: 'fe5287403_Untitleddesign4.PNG' },
+  { name: 'Leadership Blueprint Development', file: '3ca32c9dd_Untitleddesign5.PNG' },
+  { name: 'Furniture for Business', file: '57f55e737_Untitleddesign6.PNG' },
+  { name: 'Crystal Ritual', file: 'fdb1f1402_Untitleddesign7.PNG' },
+  { name: 'Ring Style Finder', file: '1f8ef3e3d_Untitleddesign8.PNG' },
+  { name: 'codezero', file: 'cceb9d867_Untitleddesign9.PNG' },
+  { name: 'BabyLoveGrowth.ai', file: '511672846_Untitleddesign10.PNG' },
+  { name: 'Metamind with Eben Pagan', file: '23bb894d3_Untitleddesign11.PNG' },
+  { name: 'E.V.A Design & Build Specialist', file: '5d298cc51_Untitleddesign12.PNG' },
+  { name: 'Sussex Fire & Security', file: '4ca8e8859_Untitleddesign.PNG' },
 ];
 
-function LogoItem({ name }) {
+function LogoItem({ name, file }) {
   return (
-    <div className="flex shrink-0 items-center gap-3 px-10 text-foreground/35 transition-colors duration-300 hover:text-gold">
-      <span className="h-2 w-2 rounded-full border border-current" />
-      <span className="font-heading text-2xl font-medium tracking-tight md:text-3xl">{name}</span>
+    <div className="flex shrink-0 items-center px-10">
+      <img
+        src={`${BASE}${file}`}
+        alt={name}
+        loading="lazy"
+        className="h-9 w-auto max-w-[200px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-11"
+      />
     </div>
   );
 }
@@ -35,11 +41,11 @@ export default function LogoCarousel() {
           className="marquee-track flex w-max shrink-0 items-center"
           style={{ animationDuration: '52s' }}
         >
-          {half.map((name, i) => (
-            <LogoItem key={`a-${i}`} name={name} />
+          {half.map((l, i) => (
+            <LogoItem key={`a-${i}`} {...l} />
           ))}
-          {half.map((name, i) => (
-            <LogoItem key={`b-${i}`} name={name} />
+          {half.map((l, i) => (
+            <LogoItem key={`b-${i}`} {...l} />
           ))}
         </div>
       </div>
