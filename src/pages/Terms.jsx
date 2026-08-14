@@ -1,7 +1,7 @@
 import LegalPage from '@/components/LegalPage';
 
 const LAST_UPDATED = '14 August 2026';
-const CONTACT_EMAIL = 'hello@blindspot.co.uk';
+const CONTACT_EMAIL = 'contact@blindspot.agency';
 
 const emailLink = (text) => (
   <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-gold underline-offset-4 hover:underline">
