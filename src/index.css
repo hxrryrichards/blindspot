@@ -147,7 +147,24 @@
 
   .theme-transition,
   .theme-transition * {
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, fill 0.3s ease, stroke 0.3s ease !important;
+  }
+
+  /* Only elements that set their own color transition it; inherited text
+     tracks the body in sync, avoiding cascading transition lag. */
+  .theme-transition body,
+  .theme-transition [class*="text-foreground"],
+  .theme-transition [class*="text-gold"],
+  .theme-transition [class*="text-primary"],
+  .theme-transition [class*="text-muted"],
+  .theme-transition [class*="text-card"],
+  .theme-transition [class*="text-secondary"],
+  .theme-transition [class*="text-accent"],
+  .theme-transition [class*="text-destructive"],
+  .theme-transition [class*="text-popover"],
+  .theme-transition [class*="text-sidebar"],
+  .theme-transition .gold-glow {
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, fill 0.3s ease, stroke 0.3s ease, color 0.3s ease !important;
   }
 }
 
