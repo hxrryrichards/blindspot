@@ -144,6 +144,11 @@
   .marquee-track {
     animation: marquee 38s linear infinite;
   }
+
+  .theme-transition,
+  .theme-transition * {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, fill 0.4s ease, stroke 0.4s ease, box-shadow 0.4s ease !important;
+  }
 }
 
 @layer utilities {
@@ -164,5 +169,9 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  .theme-transition,
+  .theme-transition * {
+    transition: none !important;
   }
 }

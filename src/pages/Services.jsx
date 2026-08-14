@@ -13,7 +13,6 @@ const tiers = [
       '10 SEO-optimised blog posts published every month',
       '1 backlink per month, building real domain authority',
       'Monthly Google Business Profile update',
-      'Monthly review monitoring',
       'Monthly SEO performance report',
     ],
   },

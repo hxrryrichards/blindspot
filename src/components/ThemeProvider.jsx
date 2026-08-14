@@ -15,7 +15,12 @@ export function ThemeProvider({ children }) {
     localStorage.setItem('blindspot-theme', theme);
   }, [theme]);
 
-  const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+  const toggle = () => {
+    const root = document.documentElement;
+    root.classList.add('theme-transition');
+    setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+    window.setTimeout(() => root.classList.remove('theme-transition'), 450);
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
