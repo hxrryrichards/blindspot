@@ -15,12 +15,12 @@ const LOGOS = [
 
 function LogoItem({ name, file }) {
   return (
-    <div className="flex shrink-0 items-center px-10">
+    <div className="flex shrink-0 items-center px-12">
       <img
         src={`${BASE}${file}`}
         alt={name}
         loading="lazy"
-        className="h-9 w-auto max-w-[200px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-11"
+        className="h-16 w-auto max-w-[280px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-20"
       />
     </div>
   );
