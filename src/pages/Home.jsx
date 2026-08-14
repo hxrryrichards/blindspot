@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
@@ -19,17 +20,17 @@ const pillars = [
 {
   n: '01',
   title: 'Find the gap',
-  body: 'We audit your market, your competitors, and your current presence to locate the blindspot holding back your growth — the opportunities everyone else is missing.'
+  body: "We start by figuring out what's actually holding you back. We audit your market, your competitors, and your current digital presence to locate your blindspot."
 },
 {
   n: '02',
   title: 'Build the presence',
-  body: 'We design automated content and SEO systems engineered to compound. Every asset we create works for you long after it ships.'
+  body: "We strategise content and visibility opportunities built around where your customers are really looking. Every asset we create works for you long after it's released."
 },
 {
   n: '03',
-  title: 'Grow the business',
-  body: 'Visibility becomes pipeline. We turn steady, compounding attention into booked calls, qualified leads, and durable revenue.'
+  title: 'See results',
+  body: "Systems are built to keep working month after month. Visibility and results compound instead of resetting every time you stop paying attention to it."
 }];
 
 
@@ -63,15 +64,6 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex min-h-screen items-center px-6 pt-32 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto w-full max-w-[1400px]">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease }}
-            className="metadata mb-10 text-foreground/40">
-            
-            Marketing systems for local service businesses
-          </motion.p>
-
           <h1 className="font-heading text-[2.75rem] leading-[1.05] tracking-tight sm:text-6xl lg:text-[6.5rem]">
             <motion.span
               initial={{ opacity: 0, y: 24 }}
@@ -105,10 +97,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1.3, ease }}
             className="mt-12 flex max-w-xl flex-col gap-8">
             
-            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl [font-family:'Plus_Jakarta_Sans',_ui-sans-serif,_system-ui,_sans-serif] font-normal">S
-
-
-
+            <p className="text-lg leading-relaxed text-foreground/70 sm:text-xl">
+              Something's holding your business growth back. A gap in strategy, visibility, or execution you can't quite see from the inside. Blindspot finds it and fixes it, with results you can actually check, not just promises.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <button
@@ -122,38 +112,29 @@ export default function Home() {
                 to="/our-work"
                 className="inline-flex h-14 items-center gap-2 rounded-full border border-gold/30 px-9 text-sm font-semibold text-foreground transition-colors hover:bg-gold/10">
                 
-                See our work <ArrowUpRight className="h-4 w-4" />
+                Book a call <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Trust bar — marquee */}
+      {/* Trust bar — stats */}
       <section className="border-y border-gold/20 py-10">
-        <div className="relative flex overflow-hidden">
-          <div className="marquee-track flex shrink-0 items-center gap-16 pr-16">
-            {[...stats, ...stats, ...stats, ...stats].map((s, i) =>
-            <div key={i} className="flex items-center gap-16">
-                <span className="font-heading text-3xl font-semibold text-foreground md:text-4xl">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-6 px-6 md:flex-nowrap md:justify-between md:px-12 lg:px-20">
+          {stats.map((s, i) => (
+            <Fragment key={i}>
+              <div className="flex items-baseline gap-3">
+                <span className="font-heading text-2xl font-semibold text-foreground sm:text-3xl md:text-4xl">
                   {s.value}
                 </span>
                 <span className="metadata text-foreground/40">{s.label}</span>
-                
               </div>
-            )}
-          </div>
-          <div className="marquee-track flex shrink-0 items-center gap-16 pr-16" aria-hidden="true">
-            {[...stats, ...stats, ...stats, ...stats].map((s, i) =>
-            <div key={i} className="flex items-center gap-16">
-                <span className="font-heading text-3xl font-semibold text-foreground md:text-4xl">
-                  {s.value}
-                </span>
-                <span className="metadata text-foreground/40">{s.label}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-gold/50" />
-              </div>
-            )}
-          </div>
+              {i < stats.length - 1 && (
+                <span className="hidden h-1.5 w-1.5 shrink-0 rounded-full bg-gold/50 md:inline-block" />
+              )}
+            </Fragment>
+          ))}
         </div>
       </section>
 
@@ -190,7 +171,7 @@ export default function Home() {
           <Reveal>
             <p className="metadata mb-6 text-gold">In their words</p>
             <h2 className="max-w-2xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              The businesses that stopped guessing.
+              The blindspots we fixed.
             </h2>
           </Reveal>
 
@@ -209,6 +190,15 @@ export default function Home() {
               </Reveal>
             )}
           </div>
+
+          <Reveal>
+            <div className="mt-14 flex justify-center">
+              <Link to="/our-work" className="group inline-flex items-center gap-2 text-sm font-medium text-foreground/50 transition-colors hover:text-gold">
+                see more of our work
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -216,25 +206,26 @@ export default function Home() {
       <section className="relative px-6 py-32 md:px-12 md:py-56 lg:px-20">
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
-            <div className="relative overflow-hidden rounded-2xl border border-gold/30 p-12 text-center md:p-24">
-              <Image
-                src={TEXTURE_IMG}
-                alt=""
-                fittingType="fill"
-                className="absolute inset-0 h-full w-full opacity-[0.12]" />
-              
-              <div className="relative">
-                <p className="metadata mb-6 text-gold">Your blindspot is closer than you think</p>
-                <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                  Let’s find the gap — and make it your advantage.
-                </h2>
-                <button
-                  type="button"
-                  onClick={openGetStarted}
-                  className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]">
+            <div className="rounded-2xl border border-gold/30 p-12 text-center md:p-24">
+              <p className="metadata mb-6 text-gold">Your blindspot is costing you customers</p>
+              <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                We’ll find the gap... And make marketing your unfair advantage.
+              </h2>
+              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-foreground/65">
+                Something is holding your growth back. We find it, fix it, and you’ll see the results yourself.
+              </p>
+              <button
+                type="button"
+                onClick={openGetStarted}
+                className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]">
 
-                  Get Started
-                </button>
+                Get Started
+              </button>
+              <div className="mt-8">
+                <Link to="/our-work" className="group inline-flex items-center gap-2 text-sm font-medium text-foreground/50 transition-colors hover:text-gold">
+                  see more of our work
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
               </div>
             </div>
           </Reveal>

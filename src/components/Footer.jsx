@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Mail, Linkedin } from 'lucide-react';
 
 const services = ['SEO', 'Social Media Marketing', 'Content Creation & Video Editing', 'User Generated Content'];
 
@@ -13,8 +14,9 @@ export default function Footer() {
               <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gold" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-foreground/60">
-              A specialist marketing agency for local service businesses. We build automated
-              content and SEO systems that compound growth over time.
+              Something's holding your business growth back. A gap in strategy, visibility, or
+              execution you can't quite see from the inside. Blindspot finds it and fixes it, with
+              results you can actually check, not just promises.
             </p>
           </div>
 
@@ -40,9 +42,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-gold/20 pt-8 text-xs text-foreground/40 md:flex-row md:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-gold/20 pt-8 text-xs text-foreground/40 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Blindspot. All rights reserved.</p>
-          <p className="metadata text-foreground/40">Every business has a blindspot. We fix yours.</p>
+          <div className="flex items-center gap-3">
+            <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+              <Mail className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+              <Linkedin className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
