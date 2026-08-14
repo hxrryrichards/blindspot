@@ -43,8 +43,8 @@ const testimonials = [
 {
   quote:
   'They don’t sell campaigns — they build systems. Our content now runs on its own and every month is bigger than the last. It’s the first marketing that actually compounded.',
-  name: 'Elena Vasquez',
-  role: 'Owner, Bright Smile Dental'
+  name: "Rob S.",
+  role: "Blueprint Le"
 },
 {
   quote:
