@@ -14,6 +14,9 @@ import Services from '@/pages/Services';
 import OurWork from '@/pages/OurWork';
 import About from '@/pages/About';
 import ServiceDetail from '@/pages/ServiceDetail';
+import Privacy from '@/pages/Privacy';
+import Terms from '@/pages/Terms';
+import Cookies from '@/pages/Cookies';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,6 +50,9 @@ const AuthenticatedApp = () => {
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-work" element={<OurWork />} />
         <Route path="/about" element={<About />} />
+        <Route path="/privacy.html" element={<Privacy />} />
+        <Route path="/terms.html" element={<Terms />} />
+        <Route path="/cookies.html" element={<Cookies />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

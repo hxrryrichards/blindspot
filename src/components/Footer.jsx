@@ -44,6 +44,11 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-gold/20 pt-8 text-xs text-foreground/40 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Blindspot. All rights reserved.</p>
+          <div className="flex items-center gap-5">
+            <Link to="/privacy.html" className="transition-colors hover:text-gold">Privacy</Link>
+            <Link to="/terms.html" className="transition-colors hover:text-gold">Terms</Link>
+            <Link to="/cookies.html" className="transition-colors hover:text-gold">Cookies</Link>
+          </div>
           <div className="flex items-center gap-3">
             <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
               <Facebook className="h-4 w-4" />
