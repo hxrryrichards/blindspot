@@ -23,6 +23,7 @@ export default function ServiceQuoteModal({ pkg, onClose }) {
           email: form.email,
           businessName: form.business,
           package: pkg === 'bespoke' ? 'Bespoke' : pkg,
+          notes: form.notes,
         }),
       });
       if (!res.ok) throw new Error('Request failed');
