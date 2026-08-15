@@ -6,8 +6,8 @@ const DARK_LOGO =
 export default function Logo({ className = '' }) {
   return (
     <span className={`inline-flex items-center ${className}`}>
-      <img src={LIGHT_LOGO} alt="Blindspot" className="h-full w-auto dark:hidden" />
-      <img src={DARK_LOGO} alt="Blindspot" className="hidden h-full w-auto dark:block" />
+      <img src={DARK_LOGO} alt="Blindspot" className="h-full w-auto dark:hidden" />
+      <img src={LIGHT_LOGO} alt="Blindspot" className="hidden h-full w-auto dark:block" />
     </span>
   );
 }
