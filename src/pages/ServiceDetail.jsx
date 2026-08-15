@@ -145,26 +145,6 @@ export default function ServiceDetail() {
             </div>
           </section>
 
-          {/* Final CTA */}
-          <section className="px-6 pb-32 pt-12 md:px-12 lg:px-20">
-            <div className="mx-auto max-w-[1400px]">
-              <Reveal>
-                <div className="rounded-2xl border border-gold/30 p-12 text-center md:p-24">
-                  <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                    Let&rsquo;s close your blindspot.
-                  </h2>
-                  <a
-                    href="https://cal.com/blindspotagency/discovery"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
-                  >
-                    Book a Call
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-          </section>
         </>
       )}
     </div>

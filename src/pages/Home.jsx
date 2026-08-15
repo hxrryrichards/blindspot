@@ -99,12 +99,14 @@ export default function Home() {
 
                 Get Started
               </button>
-              <Link
-                to="/our-work"
-                className="inline-flex h-14 items-center gap-2 rounded-full border border-gold/30 px-9 text-sm font-semibold text-foreground transition-colors hover:bg-gold/10">
-                
+              <a
+                href="https://cal.com/blindspotagency/discovery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 items-center gap-2 rounded-full border border-gold/30 px-9 text-sm font-semibold text-foreground transition-colors hover:bg-gold/10"
+              >
                 Book a call <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

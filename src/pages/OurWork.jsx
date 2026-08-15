@@ -3,10 +3,12 @@ import { ArrowUpRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import { caseStudies } from '@/data/caseStudies';
 import CaseStudyModal from '@/components/CaseStudyModal';
+import { useGetStarted } from '@/components/GetStartedContext';
 import FaqSection from '@/components/FaqSection';
 
 export default function OurWork() {
   const [selected, setSelected] = useState(null);
+  const { open: openGetStarted } = useGetStarted();
 
   return (
     <div className="overflow-hidden">
@@ -78,14 +80,13 @@ export default function OurWork() {
               <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 We could do this for you.
               </h2>
-              <a
-                href="https://cal.com/blindspotagency/discovery"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={openGetStarted}
                 className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
               >
-                Book a Call
-              </a>
+                Get Started
+              </button>
             </div>
           </Reveal>
         </div>
