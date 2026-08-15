@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link to="/" aria-label="Blindspot home" className="flex items-center">
-              <Logo className="h-8" />
+              <Logo className="h-20" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-foreground/60">
               Something's holding your business growth back. A gap in strategy, visibility, or

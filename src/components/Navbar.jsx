@@ -38,7 +38,7 @@ export default function Navbar() {
       
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12 lg:px-20">
         <Link to="/" aria-label="Blindspot home" className="flex items-center">
-          <Logo className="h-7" />
+          <Logo className="h-14" />
         </Link>
         
 
