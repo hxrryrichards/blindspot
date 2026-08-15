@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Mail, Linkedin } from 'lucide-react';
 import { services } from '@/data/services';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -8,9 +9,8 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 lg:px-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Link to="/" className="flex items-center">
-              <span className="font-heading text-2xl font-semibold tracking-tight">Blindspot</span>
-              <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gold" />
+            <Link to="/" aria-label="Blindspot home" className="flex items-center">
+              <Logo className="h-8" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-foreground/60">
               Something's holding your business growth back. A gap in strategy, visibility, or

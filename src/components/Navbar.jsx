@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import Logo from './Logo';
 import { useGetStarted } from './GetStartedContext';
 
 const links = [
@@ -36,6 +37,9 @@ export default function Navbar() {
       }>
       
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12 lg:px-20">
+        <Link to="/" aria-label="Blindspot home" className="flex items-center">
+          <Logo className="h-7" />
+        </Link>
         
 
 
