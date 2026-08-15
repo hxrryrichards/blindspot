@@ -4,13 +4,34 @@ import { X, ArrowRight, Check } from 'lucide-react';
 
 export default function ServiceQuoteModal({ pkg, onClose }) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({ name: '', email: '', business: '', notes: '' });
 
   const open = Boolean(pkg);
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+    try {
+      const res = await fetch('https://blindspot.app.n8n.cloud/webhook/lead-signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          businessName: form.business,
+          package: pkg === 'bespoke' ? 'Bespoke' : pkg,
+        }),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      setSubmitted(true);
+    } catch (err) {
+      setError('Something went wrong, please try again or email us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -84,11 +105,15 @@ export default function ServiceQuoteModal({ pkg, onClose }) {
                     rows={3}
                     className="w-full rounded-2xl border border-gold/30 bg-surface/40 p-4 text-sm text-foreground placeholder:text-foreground/40 focus:border-gold focus:outline-none"
                   />
+                  {error && (
+                    <p className="text-sm font-medium text-destructive">{error}</p>
+                  )}
                   <button
                     type="submit"
-                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)]"
+                    disabled={submitting}
+                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)] disabled:opacity-60"
                   >
-                    Get My Quote <ArrowRight className="h-4 w-4" />
+                    {submitting ? 'Sending…' : 'Get My Quote'} <ArrowRight className="h-4 w-4" />
                   </button>
                 </form>
               </>
