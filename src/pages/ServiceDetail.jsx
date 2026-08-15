@@ -153,13 +153,14 @@ export default function ServiceDetail() {
                   <h2 className="mx-auto max-w-3xl font-heading text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                     Let&rsquo;s close your blindspot.
                   </h2>
-                  <button
-                    type="button"
-                    onClick={openGetStarted}
+                  <a
+                    href="https://cal.com/blindspotagency/discovery"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-12 inline-flex h-14 items-center rounded-full bg-gold px-10 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
                   >
                     Book a Call
-                  </button>
+                  </a>
                 </div>
               </Reveal>
             </div>
