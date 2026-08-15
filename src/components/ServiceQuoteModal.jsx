@@ -113,7 +113,7 @@ export default function ServiceQuoteModal({ pkg, onClose }) {
                     disabled={submitting}
                     className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)] disabled:opacity-60"
                   >
-                    {submitting ? 'Sending…' : 'Get My Quote'} <ArrowRight className="h-4 w-4" />
+                    {submitting ? 'Sending…' : 'Begin'} <ArrowRight className="h-4 w-4" />
                   </button>
                 </form>
               </>
@@ -123,10 +123,10 @@ export default function ServiceQuoteModal({ pkg, onClose }) {
                   <Check className="h-6 w-6" />
                 </div>
                 <h3 className="font-heading text-3xl leading-tight tracking-tight">
-                  Thanks — your request is in.
+                  Thanks, your request is in.
                 </h3>
                 <p className="mt-3 text-sm text-foreground/60">
-                  We’ll come back with a tailored proposal within 1–2 business days.
+                  We’ll be in touch shortly, typically within an hour, to begin our journey together.
                 </p>
                 <button
                   onClick={onClose}
