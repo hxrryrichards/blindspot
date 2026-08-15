@@ -2,11 +2,11 @@ import Reveal from '@/components/Reveal';
 import { useGetStarted } from '@/components/GetStartedContext';
 
 const founderParagraphs = [
-  `Most agencies will take your money, manage your expectations downward, and keep you on a retainer long after it stopped making sense. That's the industry standard. It's not ours.`,
+  `Most agencies will give you false promises, underperform and not keep you informed about how your business is actually growing. That's why I created Blindspot.`,
   `Blindspot was built on a different belief entirely. If we don't deliver for you, you shouldn't be working with us. Full stop.`,
-  `That's not a marketing line. It's how we operate. If you're not seeing results, you'll leave, and you should. We'd rather lose a client than keep one we're not delivering for. That's the only way this works long term, for you and for us.`,
-  `Clear communication, concrete results and a team who treat your business like their own. We pride ourselves on good work and good results.`,
-  `We've maintained 100% client retention since we launched. Not because clients are locked in. Because we haven't given them a reason to leave.`,
+  `That's not one of those false promises. It's how we operate. If you're not seeing results, you'll want to leave, and you absolutely should. We'd rather lose a client than keep one we're not delivering for. That's the only way this works long term, for you and for us.`,
+  `Expect clear communication, concrete results and a team who treat your business like their own. We pride ourselves on good work and good results.`,
+  `We've maintained 100% client retention since we launched. Because we haven't given anyone a reason to stop working with us.`,
 ];
 
 const whyExist = [

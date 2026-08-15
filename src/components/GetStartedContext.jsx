@@ -55,7 +55,7 @@ export function GetStartedProvider({ children }) {
                 <>
                   <p className="metadata mb-4 text-gold">Get started</p>
                   <h3 className="font-heading text-3xl leading-tight tracking-tight">
-                    Let's find your blindspot.
+                    Let&rsquo;s fix your blindspot.
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/60">
                     Leave your email. We'll show you what your blindspot might actually be, and what closing it looks like.
