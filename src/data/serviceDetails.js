@@ -23,7 +23,7 @@ export const serviceDetails = {
       testimonial: {
         quote:
           "We started as a fresh business, with no website traffic and no real online presence. Harry got to work straight away and the results have kept building month after month since. We've already seen sales and enquiries within the first few months of a long term project. He's been straightforward, responsive, and clearly knows what he's doing. Highly recommend.",
-        author: 'Jeff H., Founder, Furniture For Business',
+        author: 'Jeff Halls, Founder',
       },
     },
   },
