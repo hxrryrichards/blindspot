@@ -22,7 +22,7 @@ export const serviceDetails = {
         'Within the first 3 months, the site went from zero visibility to 6,780 impressions and 20 clicks on Google Search, including ranking for product intent terms like "office chairs near me." That visibility translated into their first 2 organic enquiries and first sale.',
       testimonial: {
         quote:
-          "We started as a fresh business, with no website traffic and no real online presence. Harry got to work straight away and the results have kept building month after month since. We've already seen sales and enquiries within the first few months of a long term project. He's been straightforward, responsive, and clearly knows what he's doing. Highly recommend.",
+          "We started as a fresh business, with no website traffic and no real online presence. Blindspot got to work straight away and the results have kept building month after month since. We've already seen sales and enquiries within the first few months of a long term project. They've been straightforward, responsive, and clearly knows what they're doing. Highly recommend.",
         author: 'Jeff Halls, Founder',
       },
     },
