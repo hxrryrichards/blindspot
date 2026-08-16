@@ -43,9 +43,9 @@ const testimonials = [
 },
 {
   quote:
-  "Myself and the Blindspot team have been working together for a couple of years now. Their insight and energy are always great assets when we are working together. They're always timely in responses and treat what they do for us like it's their own company.",
-  name: "Rob S.",
-  role: "CEO , Blueprint Leadership Development"
+  "We started as a fresh business, with no website traffic and no real online presence. Harry got to work straight away and the results have kept building month after month since. We've already seen sales and enquiries within the first few months of a long term project. He's been straightforward, responsive, and clearly knows what he's doing. Highly recommend.",
+  name: "Jeff H.",
+  role: "Founder, Furniture For Business"
 },
 {
   quote:
