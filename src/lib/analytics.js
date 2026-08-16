@@ -1,6 +1,6 @@
 // Google Analytics loader, gated by cookie consent.
 // Set your Measurement ID here to enable tracking (e.g. 'G-XXXXXXXXXX').
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-J122GSMWC4';
 const CONSENT_KEY = 'blindspot-cookie-consent';
 
 export function getConsent() {

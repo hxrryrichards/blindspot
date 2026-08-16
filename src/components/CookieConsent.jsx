@@ -17,6 +17,12 @@ export default function CookieConsent() {
     }
   }, []);
 
+  useEffect(() => {
+    const reopen = () => setVisible(true);
+    window.addEventListener('reopen-cookie-consent', reopen);
+    return () => window.removeEventListener('reopen-cookie-consent', reopen);
+  }, []);
+
   const accept = () => {
     setConsent('accepted');
     initAnalytics();

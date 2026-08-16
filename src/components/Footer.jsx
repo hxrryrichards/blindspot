@@ -47,6 +47,13 @@ export default function Footer() {
             <Link to="/privacy.html" className="transition-colors hover:text-gold">Privacy</Link>
             <Link to="/terms.html" className="transition-colors hover:text-gold">Terms</Link>
             <Link to="/cookies.html" className="transition-colors hover:text-gold">Cookies</Link>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('reopen-cookie-consent'))}
+              className="transition-colors hover:text-gold"
+            >
+              Cookie Preferences
+            </button>
           </div>
           <div className="flex items-center gap-3">
             <a href="https://www.facebook.com/profile.php?id=61580712877141" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
