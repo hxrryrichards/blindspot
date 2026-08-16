@@ -49,16 +49,16 @@ export default function Footer() {
             <Link to="/cookies.html" className="transition-colors hover:text-gold">Cookies</Link>
           </div>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+            <a href="https://www.facebook.com/profile.php?id=61580712877141" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+            <a href="https://www.instagram.com/theblindspotagency" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+            <a href="mailto:contact@blindspot.agency" aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
               <Mail className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
+            <a href="https://www.linkedin.com/company/blindspotagency/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-foreground/60 transition-colors hover:border-gold hover:text-gold">
               <Linkedin className="h-4 w-4" />
             </a>
           </div>
