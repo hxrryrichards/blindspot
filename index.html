@@ -10,6 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>Blindspot — Marketing Systems for Local Service Businesses</title>
     <meta name="description" content="Blindspot is a specialist marketing agency for local service businesses. We build automated content and SEO systems that compound growth over time." />
+    <script type="text/javascript">
+      // GitHub Pages SPA redirect — restore clean URL from 404.html redirect
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   </head>
   <body>
     <div id="root"></div>
