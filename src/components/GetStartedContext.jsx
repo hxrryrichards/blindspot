@@ -7,18 +7,35 @@ const GetStartedContext = createContext({ open: () => {} });
 export function GetStartedProvider({ children }) {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [email, setEmail] = useState('');
 
   const openModal = () => {
     setSubmitted(false);
+    setError('');
     setEmail('');
     setOpen(true);
   };
   const close = () => setOpen(false);
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     if (!email) return;
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+    try {
+      const res = await fetch('https://blindspot.app.n8n.cloud/webhook/get-started', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      setSubmitted(true);
+    } catch (err) {
+      setError('Something went wrong, please try again or email us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -69,11 +86,15 @@ export function GetStartedProvider({ children }) {
                       placeholder="you@business.com"
                       className="h-14 w-full rounded-2xl border border-gold/30 bg-surface/40 px-5 text-base text-foreground placeholder:text-foreground/40 focus:border-gold focus:outline-none"
                     />
+                    {error && (
+                      <p className="text-sm font-medium text-destructive">{error}</p>
+                    )}
                     <button
                       type="submit"
-                      className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)]"
+                      disabled={submitting}
+                      className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-gold px-7 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_32px_rgba(201,168,76,0.4)] disabled:opacity-60"
                     >
-                      Submit <ArrowRight className="h-4 w-4" />
+                      {submitting ? 'Sending…' : 'Submit'} <ArrowRight className="h-4 w-4" />
                     </button>
                   </form>
                 </>
