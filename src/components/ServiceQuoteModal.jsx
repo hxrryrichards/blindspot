@@ -67,15 +67,17 @@ export default function ServiceQuoteModal({ pkg, onClose }) {
               <>
                 <p className="metadata mb-4 text-gold">Get a quote</p>
                 <h3 className="font-heading text-3xl leading-tight tracking-tight">
-                  Let’s build your quote.
+                  Let&rsquo;s build your quote.
                 </h3>
                 <p className="mt-2 text-sm font-semibold text-foreground/80">
-                  You selected the {pkg} package.
+                  {pkg === 'bespoke'
+                    ? "You&rsquo;re after something bespoke."
+                    : `You selected the ${pkg} package.`}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-foreground/60">
-                  Every business is different, so we tailor pricing to your goals rather than using
-                  a one size fits all rate card. Tell us a bit about your business and we’ll come
-                  back with a proposal built around you.
+                  {pkg === 'bespoke'
+                    ? "Since you already know you&rsquo;d like something tailored, tell us a bit about your business, and we&rsquo;ll be in touch to find some time to chat and build a package exactly around what you need."
+                    : "Every business is different, so we don&rsquo;t use a one size fits all rate card. Tell us a bit about yours, and we&rsquo;ll be in touch to find some time to chat and get your quote exactly right."}
                 </p>
                 <form onSubmit={submit} className="mt-6 space-y-4">
                   <input
