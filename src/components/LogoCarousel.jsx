@@ -15,12 +15,12 @@ const LOGOS = [
 
 function LogoItem({ name, file }) {
   return (
-    <div className="flex shrink-0 items-center px-12">
+    <div className="flex shrink-0 items-center px-5 md:px-12">
       <img
         src={`${BASE}${file}`}
         alt={name}
         loading="lazy"
-        className="h-20 w-auto max-w-[300px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
+        className="h-12 w-auto max-w-[150px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-20 md:max-w-[300px]"
       />
     </div>
   );
@@ -35,11 +35,11 @@ export default function LogoCarousel() {
         <p className="metadata text-center text-foreground/40">Brands we've scaled</p>
       </div>
       <div className="relative flex overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-background to-transparent md:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-background to-transparent md:w-32" />
         <div
-          className="marquee-track flex w-max shrink-0 items-center"
-          style={{ animationDuration: '52s' }}
+          className="marquee-track flex w-max shrink-0 items-center will-change-transform"
+          style={{ animationDuration: '52s', touchAction: 'pan-x' }}
         >
           {half.map((l, i) => (
             <LogoItem key={`a-${i}`} {...l} />
