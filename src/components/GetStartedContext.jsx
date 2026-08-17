@@ -104,10 +104,10 @@ export function GetStartedProvider({ children }) {
                     <Check className="h-6 w-6" />
                   </div>
                   <h3 className="font-heading text-3xl leading-tight tracking-tight">
-                    Thanks — we'll be in touch.
+                    Thanks, we'll be in touch.
                   </h3>
                   <p className="mt-3 text-sm text-foreground/60">
-                    Check your inbox for the next steps.
+                    Keep an eye on your inbox.
                   </p>
                   <button
                     onClick={close}
