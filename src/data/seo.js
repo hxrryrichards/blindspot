@@ -7,12 +7,12 @@ export const seoData = {
   '/services': {
     title: 'Services | Blindspot',
     description:
-      'SEO and GEO, social media marketing, content creation, and UGC. Marketing packages built for local service businesses that want growth that compounds.',
+      'SEO and GEO, social media marketing, content creation, and UGC. Marketing systems built for growth that compounds, not campaigns that reset.',
   },
   '/services/seo-geo': {
     title: 'SEO & GEO | Blindspot',
     description:
-      'SEO and GEO services that get your business found on Google and AI tools like ChatGPT. Optimised content, backlinks, and local search visibility that compounds over time.',
+      'SEO and GEO services that get your business found on Google and in AI search results. Optimised content, backlinks, and visibility that compounds over time.',
   },
   '/services/social-media': {
     title: 'Social Media Marketing | Blindspot',
@@ -37,7 +37,7 @@ export const seoData = {
   '/about': {
     title: 'About | Blindspot',
     description:
-      'Blindspot is a West Sussex marketing agency built on the belief that most local service businesses have a blindspot they do not know about. We find it and fix it.',
+      'Blindspot is a marketing agency built on one belief: every business has a blindspot holding it back. We find it and fix it.',
   },
   '/privacy.html': {
     title: 'Privacy Policy | Blindspot',
