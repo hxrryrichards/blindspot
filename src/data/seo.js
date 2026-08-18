@@ -2,7 +2,7 @@ export const seoData = {
   '/': {
     title: 'Blindspot | Digital Marketing Agency in West Sussex',
     description:
-      'Blindspot is a specialist marketing agency for local service businesses. We build automated content and SEO systems that compound growth over time.',
+      'Blindspot finds the gap holding your business back and fixes it, with results you can actually check, not just promises.',
   },
   '/services': {
     title: 'Services | Blindspot',
