@@ -47,10 +47,10 @@ export const caseStudies = [
     id: 'babylovegrowth',
     name: 'BabyLoveGrowth.AI',
     category: 'SaaS',
-    preview: 'From $100,000 to over $5,000,000 in annual recurring revenue.',
+    preview: 'From $0 to over $5,000,000 in annual recurring revenue.',
     challenge: `BabyLoveGrowth.AI needed a consistent, scalable content engine to fuel the channel driving nearly all of their customer acquisition, paid social and UGC.`,
     whatWeDid: `Started by creating content directly, then built and now lead a growing creator team producing ongoing UGC for their Meta ad campaigns. Monthly output has scaled from 15 pieces of content in the early months to 40, and now 80 pieces of content per month, with full creative direction and quality control on every piece.`,
-    results: `Since September 2025, BabyLoveGrowth.AI has grown from $100,000 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.`,
+    results: `Since September 2025, BabyLoveGrowth.AI has grown from $0 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.`,
   },
   {
     id: 'the-flower-shoppe',

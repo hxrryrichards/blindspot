@@ -97,7 +97,7 @@ export const serviceDetails = {
       whatWeDid:
         'Started by creating content directly, then built and now lead a growing creator team producing ongoing UGC for their Meta ad campaigns. Output has scaled from 15 pieces of content per month to 80.',
       results:
-        'Since September 2025, BabyLoveGrowth.AI has grown from $100,000 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.',
+        'Since September 2025, BabyLoveGrowth.AI has grown from $0 to over $5,000,000 in annual recurring revenue, with this content engine as their primary growth driver throughout.',
     },
   },
 };
