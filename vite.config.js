@@ -1,6 +1,8 @@
 import base44 from "@base44/vite-plugin"
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import { copyFileSync } from 'fs'
+import { join } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,5 +18,15 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
+    {
+      name: 'copy-index-to-404',
+      apply: 'build',
+      closeBundle() {
+        copyFileSync(
+          join(process.cwd(), 'dist', 'index.html'),
+          join(process.cwd(), 'dist', '404.html')
+        );
+      }
+    }
   ]
 });
