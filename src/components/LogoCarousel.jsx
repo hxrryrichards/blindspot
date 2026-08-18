@@ -19,7 +19,7 @@ function LogoItem({ name, file }) {
       <img
         src={`${BASE}${file}`}
         alt={name}
-        className="h-12 w-auto max-w-[150px] object-contain opacity-80 invert dark:invert-0 transition-opacity duration-300 hover:opacity-100 md:h-20 md:max-w-[300px]"
+        className="h-12 w-auto max-w-[150px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-20 md:max-w-[300px]"
       />
     </div>
   );
