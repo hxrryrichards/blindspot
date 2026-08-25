@@ -47,6 +47,7 @@ const AuthenticatedApp = () => {
       <Route path="/fb" element={<Navigate to="/?utm_source=facebook&utm_medium=social&utm_campaign=bio" replace />} />
       <Route path="/ig" element={<Navigate to="/?utm_source=instagram&utm_medium=social&utm_campaign=bio" replace />} />
       <Route path="/li" element={<Navigate to="/?utm_source=linkedin&utm_medium=social&utm_campaign=bio" replace />} />
+      <Route path="/qr" element={<Navigate to="/?utm_source=pitchboard&utm_medium=offline&utm_campaign=football_sponsorship" replace />} />
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
