@@ -11,9 +11,9 @@ const HERO_IMG = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c
 const TEXTURE_IMG = 'https://media.base44.com/images/public/6a7f217dc1ce7582bf8d14c5/1540c090b_generated_a8747959.png';
 
 const stats = [
-{ value: '10+', label: 'Brands scaled' },
-{ value: '4M+', label: 'Organic views generated' },
-{ value: '100%', label: 'Client retention rate' }];
+{ value: '15+', label: 'Brands scaled' },
+{ value: '10+', label: 'Industries served' },
+{ value: '11+ months', label: 'Average client relationship' }];
 
 
 const pillars = [

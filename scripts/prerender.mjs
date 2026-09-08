@@ -42,7 +42,7 @@ const MIME = {
   '.map': 'application/json',
 };
 
-function startServer(root, port) {
+function startServer(root) {
   return new Promise((resolve) => {
     const server = http.createServer((req, res) => {
       const urlPath = req.url.split('?')[0];
@@ -71,7 +71,8 @@ function startServer(root, port) {
         res.end('Not found');
       }
     });
-    server.listen(port, () => resolve(server));
+    // Port 0 lets the OS assign a free port
+    server.listen(0, () => resolve({ server, port: server.address().port }));
   });
 }
 
@@ -133,8 +134,7 @@ async function prerenderRoute(browser, port, route) {
 
 async function main() {
   console.log('Prerendering routes...');
-  const port = 4174;
-  const server = await startServer(dist, port);
+  const { server, port } = await startServer(dist);
 
   const browser = await puppeteer.launch({
     headless: true,
