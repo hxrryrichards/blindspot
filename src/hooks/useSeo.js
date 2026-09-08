@@ -10,7 +10,7 @@ function setMeta(attr, key, content) {
   tag.setAttribute('content', content);
 }
 
-export function useSeo({ title, description, canonical }) {
+export function useSeo({ title, description, canonical, image, jsonLd }) {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -31,5 +31,25 @@ export function useSeo({ title, description, canonical }) {
       }
       link.setAttribute('href', canonical);
     }
-  }, [title, description, canonical]);
+    if (image) {
+      setMeta('property', 'og:image', image);
+      setMeta('name', 'twitter:image', image);
+    }
+    if (jsonLd) {
+      let script = document.querySelector('script[type="application/ld+json"][data-seo="article"]');
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.setAttribute('data-seo', 'article');
+        document.head.appendChild(script);
+      }
+      script.textContent = typeof jsonLd === 'string' ? jsonLd : JSON.stringify(jsonLd);
+    }
+    return () => {
+      if (jsonLd) {
+        const script = document.querySelector('script[type="application/ld+json"][data-seo="article"]');
+        if (script) script.remove();
+      }
+    };
+  }, [title, description, canonical, image, jsonLd]);
 }

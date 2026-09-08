@@ -30,3 +30,6 @@ dist-ssr
 .env
 .vite
 base44/.app.jsonc
+
+# Blog articles (synced at build time, not committed)
+src/data/blog/*.json

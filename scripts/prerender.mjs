@@ -12,8 +12,21 @@ if (!existsSync(dist)) {
   process.exit(1);
 }
 
+// Read blog article slugs from manifest (written by sync-articles.mjs)
+const manifestPath = join(__dirname, '..', 'src', 'data', 'blog', 'manifest.json');
+let blogRoutes = [];
+if (existsSync(manifestPath)) {
+  try {
+    const slugs = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+    blogRoutes = slugs.map((slug) => `/blog/${slug}`);
+  } catch (e) {
+    console.warn('Warning: could not parse blog manifest:', e.message);
+  }
+}
+
 const ROUTES = [
   '/',
+  '/blog',
   '/services',
   '/our-work',
   '/about',
@@ -21,6 +34,7 @@ const ROUTES = [
   '/services/social-media',
   '/services/content-creation',
   '/services/ugc',
+  ...blogRoutes,
 ];
 
 const MIME = {

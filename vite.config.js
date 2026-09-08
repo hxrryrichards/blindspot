@@ -1,29 +1,61 @@
 import base44 from "@base44/vite-plugin"
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import { copyFileSync, writeFileSync } from 'fs'
+import { copyFileSync, writeFileSync, readFileSync, existsSync } from 'fs'
 import { join } from 'path'
-
-const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://blindspot.agency/</loc><priority>1.0</priority></url>
-  <url><loc>https://blindspot.agency/services</loc><priority>0.9</priority></url>
-  <url><loc>https://blindspot.agency/services/seo-geo</loc><priority>0.8</priority></url>
-  <url><loc>https://blindspot.agency/services/social-media</loc><priority>0.8</priority></url>
-  <url><loc>https://blindspot.agency/services/content-creation</loc><priority>0.8</priority></url>
-  <url><loc>https://blindspot.agency/services/ugc</loc><priority>0.8</priority></url>
-  <url><loc>https://blindspot.agency/our-work</loc><priority>0.7</priority></url>
-  <url><loc>https://blindspot.agency/about</loc><priority>0.6</priority></url>
-  <url><loc>https://blindspot.agency/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://blindspot.agency/terms.html</loc><priority>0.3</priority></url>
-  <url><loc>https://blindspot.agency/cookies.html</loc><priority>0.3</priority></url>
-</urlset>`;
 
 const ROBOTS_TXT = `User-agent: *
 Allow: /
 
 Sitemap: https://blindspot.agency/sitemap.xml
 `;
+
+function buildSitemap() {
+  const staticUrls = [
+    { loc: 'https://blindspot.agency/', priority: '1.0' },
+    { loc: 'https://blindspot.agency/blog', priority: '0.8' },
+    { loc: 'https://blindspot.agency/services', priority: '0.9' },
+    { loc: 'https://blindspot.agency/services/seo-geo', priority: '0.8' },
+    { loc: 'https://blindspot.agency/services/social-media', priority: '0.8' },
+    { loc: 'https://blindspot.agency/services/content-creation', priority: '0.8' },
+    { loc: 'https://blindspot.agency/services/ugc', priority: '0.8' },
+    { loc: 'https://blindspot.agency/our-work', priority: '0.7' },
+    { loc: 'https://blindspot.agency/about', priority: '0.6' },
+    { loc: 'https://blindspot.agency/privacy.html', priority: '0.3' },
+    { loc: 'https://blindspot.agency/terms.html', priority: '0.3' },
+    { loc: 'https://blindspot.agency/cookies.html', priority: '0.3' },
+  ];
+
+  // Add blog article URLs from manifest (written by sync-articles.mjs)
+  const manifestPath = join(process.cwd(), 'src', 'data', 'blog', 'manifest.json');
+  const blogUrls = [];
+  if (existsSync(manifestPath)) {
+    try {
+      const slugs = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+      for (const slug of slugs) {
+        blogUrls.push({ loc: `https://blindspot.agency/blog/${slug}`, priority: '0.7' });
+      }
+    } catch (e) {
+      console.warn('Warning: could not parse blog manifest for sitemap:', e.message);
+    }
+  }
+
+  // Insert blog article URLs right after the /blog index URL
+  const allUrls = [
+    ...staticUrls.slice(0, 2),
+    ...blogUrls,
+    ...staticUrls.slice(2),
+  ];
+
+  const urlEntries = allUrls
+    .map((u) => `  <url><loc>${u.loc}</loc><priority>${u.priority}</priority></url>`)
+    .join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
+}
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -45,7 +77,7 @@ export default defineConfig({
       closeBundle() {
         const dist = join(process.cwd(), 'dist');
         copyFileSync(join(dist, 'index.html'), join(dist, '404.html'));
-        writeFileSync(join(dist, 'sitemap.xml'), SITEMAP_XML);
+        writeFileSync(join(dist, 'sitemap.xml'), buildSitemap());
         writeFileSync(join(dist, 'robots.txt'), ROBOTS_TXT);
       }
     }

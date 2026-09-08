@@ -29,6 +29,11 @@ export const seoData = {
     description:
       'UGC and ad creative that converts. Video content that looks like a real customer filmed it, built and managed at scale for brands serious about paid social.',
   },
+  '/blog': {
+    title: 'Blog | Blindspot',
+    description:
+      'Marketing insights, strategies, and stories from the Blindspot team.',
+  },
   '/our-work': {
     title: 'Our Work | Blindspot',
     description:

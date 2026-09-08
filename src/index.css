@@ -145,6 +145,80 @@
     animation: marquee 38s linear infinite;
   }
 
+  .article-content {
+    @apply text-base leading-relaxed text-foreground/80;
+  }
+  .article-content > * + * {
+    @apply mt-6;
+  }
+  .article-content h1 {
+    @apply font-heading text-3xl font-medium tracking-tight mt-12;
+  }
+  .article-content h2 {
+    @apply font-heading text-2xl font-medium tracking-tight mt-10;
+  }
+  .article-content h3 {
+    @apply font-heading text-xl font-medium tracking-tight mt-8;
+  }
+  .article-content h4 {
+    @apply font-heading text-lg font-medium tracking-tight mt-6;
+  }
+  .article-content p {
+    @apply text-base leading-relaxed text-foreground/80;
+  }
+  .article-content a {
+    @apply text-gold transition-colors;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--gold) / 0.4);
+    text-underline-offset: 3px;
+  }
+  .article-content a:hover {
+    @apply text-gold/80;
+  }
+  .article-content ul {
+    @apply list-disc pl-6 space-y-2;
+  }
+  .article-content ol {
+    @apply list-decimal pl-6 space-y-2;
+  }
+  .article-content li {
+    @apply leading-relaxed;
+  }
+  .article-content img {
+    @apply rounded-2xl border border-gold/20 my-8 w-full;
+  }
+  .article-content figure {
+    @apply my-8;
+  }
+  .article-content figcaption {
+    @apply mt-3 text-sm text-foreground/50 text-center;
+  }
+  .article-content blockquote {
+    @apply border-l-2 border-gold/40 pl-6 italic text-foreground/70 my-8;
+  }
+  .article-content pre {
+    @apply rounded-2xl border border-gold/20 bg-surface/40 p-6 overflow-x-auto my-8 text-sm;
+  }
+  .article-content code {
+    @apply rounded bg-surface/50 px-1.5 py-0.5 text-sm;
+  }
+  .article-content pre code {
+    @apply bg-transparent p-0;
+  }
+  .article-content table {
+    @apply w-full border-collapse my-8;
+  }
+  .article-content th,
+  .article-content td {
+    @apply border border-gold/20 px-4 py-2 text-left;
+  }
+  .article-content th {
+    @apply font-semibold;
+  }
+  .article-content hr {
+    @apply border-gold/20 my-12;
+  }
+
   .theme-transition,
   .theme-transition * {
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, fill 0.3s ease, stroke 0.3s ease !important;
