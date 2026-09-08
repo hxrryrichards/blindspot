@@ -10,7 +10,6 @@ const links = [
 { label: 'Home', path: '/' },
 { label: 'Services', path: '/services' },
 { label: 'Our Work', path: '/our-work' },
-{ label: 'Blog', path: '/blog' },
 { label: 'About', path: '/about' }];
 
 
