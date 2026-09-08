@@ -5,19 +5,19 @@ export const seoData = {
       'Blindspot finds the gap holding your business back and fixes it, with results you can actually check, not just promises.',
   },
   '/services': {
-    title: 'Services | Blindspot',
+    title: 'Digital Marketing Services | SEO, Social Media & Content',
     description:
       'SEO and GEO, social media marketing, content creation, and UGC. Marketing systems built for growth that compounds, not campaigns that reset.',
   },
   '/services/seo-geo': {
-    title: 'SEO & GEO | Blindspot',
+    title: 'SEO & GEO Services for AI & Search Visibility | Blindspot',
     description:
       'SEO and GEO services that get your business found on Google and in AI search results. Optimised content, backlinks, and visibility that compounds over time.',
   },
   '/services/social-media': {
-    title: 'Social Media Marketing | Blindspot',
+    title: 'Social Media Marketing Services | Blindspot Agency',
     description:
-      'Social media marketing that builds presence on the platforms your customers actually use. Consistent, strategic posting that earns trust before they pick up the phone.',
+      'Build trust with social media marketing on the platforms your customers use. Get consistent, strategic posting that grows visibility and engagement.',
   },
   '/services/content-creation': {
     title: 'Content Creation and Video Editing | Blindspot',
@@ -25,7 +25,7 @@ export const seoData = {
       'Photos and videos of your actual work, filmed and edited professionally. Content that stops the scroll, earns trust, and makes people want to be your customer.',
   },
   '/services/ugc': {
-    title: 'User Generated Content | Blindspot',
+    title: 'User-Generated Content & UGC Ads | Blindspot Agency',
     description:
       'UGC and ad creative that converts. Video content that looks like a real customer filmed it, built and managed at scale for brands serious about paid social.',
   },
@@ -35,12 +35,12 @@ export const seoData = {
       'Marketing insights, strategies, and stories from the Blindspot team.',
   },
   '/our-work': {
-    title: 'Our Work | Blindspot',
+    title: 'SEO Case Studies & Results | Digital Marketing in Sussex',
     description:
       'Verified case studies showing real results. From zero visibility to thousands of impressions, and from word of mouth enquiries to 15x growth.',
   },
   '/about': {
-    title: 'About | Blindspot',
+    title: 'About Blindspot: Honest, Results-Driven Marketing Agency',
     description:
       'Blindspot is a marketing agency built on one belief: every business has a blindspot holding it back. We find it and fix it.',
   },
