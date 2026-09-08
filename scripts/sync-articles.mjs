@@ -74,7 +74,7 @@ async function main() {
     slugs.push(safeSlug);
     console.log(`  ✓ ${safeSlug}`);
 
-    await new Promise(resolve => setTimeout(resolve, 600));
+ await new Promise(resolve => setTimeout(resolve, 1200));
   }
 
   if (slugs.length === 0) {
