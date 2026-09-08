@@ -162,6 +162,9 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error('Prerendering failed:', err);
-  process.exit(1);
+  console.error('');
+  console.error('⚠  Prerendering failed:', err.message);
+  console.error('   The SPA fallback (index.html) will be used for all routes.');
+  console.error('   To fix: ensure Chromium system dependencies are installed in CI.');
+  console.error('');
 });
