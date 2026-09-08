@@ -34,7 +34,7 @@ function getArticleId(summary) {
 async function fetchAllSummaries() {
   const all = [];
   let offset = 0;
-  const limit = 500;
+  const limit = 50;
   while (true) {
     const data = await fetchJSON(`/v1/articles?limit=${limit}&offset=${offset}`);
     const batch = Array.isArray(data) ? data : (data.articles || data.data || []);
