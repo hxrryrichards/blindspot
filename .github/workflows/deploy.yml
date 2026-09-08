@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -35,11 +37,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libxshmfence1 || true
           sudo apt-get install -y libasound2 || sudo apt-get install -y libasound2t64 || true
-          
+
       - name: Build
         run: npm run build
         env:
           BASE44_LEGACY_SDK_IMPORTS: true
+          BLG_API_KEY: ${{ secrets.BLG_API_KEY }}
+          
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
