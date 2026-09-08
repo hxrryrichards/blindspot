@@ -9,7 +9,8 @@ import { seoData } from '@/data/seo';
 export default function Layout() {
   const location = useLocation();
   const seo = seoData[location.pathname] || seoData['/'];
-  useSeo(seo);
+  const canonical = `https://blindspot.agency${location.pathname}`;
+  useSeo({ ...seo, canonical });
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <ScrollProgress />

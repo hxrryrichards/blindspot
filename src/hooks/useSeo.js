@@ -10,7 +10,7 @@ function setMeta(attr, key, content) {
   tag.setAttribute('content', content);
 }
 
-export function useSeo({ title, description }) {
+export function useSeo({ title, description, canonical }) {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -22,5 +22,14 @@ export function useSeo({ title, description }) {
       setMeta('property', 'og:description', description);
       setMeta('name', 'twitter:description', description);
     }
-  }, [title, description]);
+    if (canonical) {
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', canonical);
+    }
+  }, [title, description, canonical]);
 }
