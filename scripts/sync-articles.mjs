@@ -56,9 +56,11 @@ async function main() {
     throw new Error('No articles returned from API. Aborting to prevent empty blog.');
   }
 
-  const slugs = [];
+   const slugs = [];
+
   for (const summary of summaries) {
     const articleId = getArticleId(summary);
+
     if (!articleId) {
       console.warn(`  Skipping article without ID: ${JSON.stringify(summary).slice(0, 100)}`);
       continue;
@@ -71,6 +73,8 @@ async function main() {
     writeFileSync(join(BLOG_DIR, `${safeSlug}.json`), JSON.stringify(full, null, 2));
     slugs.push(safeSlug);
     console.log(`  ✓ ${safeSlug}`);
+
+    await new Promise(resolve => setTimeout(resolve, 600));
   }
 
   if (slugs.length === 0) {
@@ -80,7 +84,6 @@ async function main() {
   writeFileSync(join(BLOG_DIR, 'manifest.json'), JSON.stringify(slugs, null, 2));
   console.log(`\nSynced ${slugs.length} articles to src/data/blog/`);
 }
-
 main().catch((err) => {
   console.error('\n⚠ Article sync failed:', err.message);
   console.error('  Build aborted to prevent deploying an incomplete blog.\n');
